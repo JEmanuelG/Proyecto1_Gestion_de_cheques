@@ -1,3 +1,3 @@
-pruebas.py
-pruebas2.py
-data_base_cheques.db
+data/
+pruebas/
+__pycache__/

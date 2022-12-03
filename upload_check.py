@@ -1,7 +1,7 @@
 from tkinter import *
 import data_base
 
-def upload_check_gui():    
+def upload_check():    
 
     # VARIABLES DE CONTROL
     date_variable = StringVar()
@@ -25,13 +25,13 @@ def upload_check_gui():
 #    ************** PROCESOS ******************
 
     def upload_check():
-        data_base.cargar_cheque(date_variable.get(),
-                                id_variable.get(),
-                                client_variable.get(),
-                                bank_variable.get(),
-                                check_number_variable.get(),
-                                amount_variable.get(),
-                                payment_date_variable.get()
+        data_base.insert_check_in_db(date_variable.get(),
+                                     id_variable.get(),
+                                     client_variable.get(),
+                                     bank_variable.get(),
+                                     check_number_variable.get(),
+                                     amount_variable.get(),
+                                     payment_date_variable.get()
                                 )
         window_load.destroy()
 
@@ -62,10 +62,10 @@ def upload_check_gui():
     
     button_save = Button(window_load,
                          text='Cargar',
-                         command=lambda:upload_check()).grid(row=8,
-                                                             column=5,
-                                                             padx=10,
-                                                             pady=10)
+                         command=upload_check).grid(row=8,
+                                                    column=5,
+                                                    padx=10,
+                                                    pady=10)
     
 
     # CAMPOS DE ENTRADA

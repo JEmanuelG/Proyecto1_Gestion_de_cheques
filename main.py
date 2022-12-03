@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import ttk
 import upload_check
 import search_check
 import sys
@@ -29,11 +30,12 @@ Label(root, text='GESTOR DE CHEQUES', font=('arial',30, 'bold')).pack(pady=20)
 
 # BOTONES
 # CARGAR UN NUEVO CHEQUE
-button_load = Button(root, text='Cargar cheque', width=15, height=3, command=upload_check.upload_check_gui).pack(pady=20)
+button_load = Button(root, text='Cargar cheque', width=15, height=3, command=upload_check.upload_check).pack(pady=20)
+
 # BUSCAR CHEQUES
-button_search = Button(root, text='Buscar cheque', width=15, height=3, command=search_check.search_check_gui).pack(pady=20)
+button_search = Button(root, text='Buscar cheque', width=15, height=3, command=search_check.search_check).pack(pady=20)
 # OPCIONES
-button_opciones = Button(root, text='Opciones', width=15, height=3, command=proximamente).pack(pady=20)
+button_opciones = Button(root, text='Opciones', width=15, height=3, command=proximamente, state='disabled').pack(pady=20)
 # SALIR DEL PROGRAMA
 button_exit = Button(root, text='Salir', width=15, height=3, command=sys.exit).pack(pady=20)
 
