@@ -15,7 +15,7 @@ def upload_check():
 
     window_load = Toplevel()
     window_load.title('Cargar cheque')
-    window_load.geometry('350x400')
+    window_load.geometry('800x600')
     window_load.resizable(False,False)
     # Foco automático sobre la ventana que se abre
     window_load.focus()
@@ -31,8 +31,7 @@ def upload_check():
                                      bank_variable.get(),
                                      check_number_variable.get(),
                                      amount_variable.get(),
-                                     payment_date_variable.get()
-                                )
+                                     payment_date_variable.get())
         window_load.destroy()
 
 
